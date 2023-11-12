@@ -1,0 +1,524 @@
+@font-face {
+    font-family: friends;
+    src: url(typo/GABRWFFR.TTF) format(TrueType);
+}
+
+
+
+html,body {
+    margin: 0; 
+    background-color: rgb(18, 18, 18);
+    font-family: friends;
+    color: rgb(2, 172, 224);
+   
+    
+    
+}
+
+header { 
+    background-color:rgb(39, 39, 40);
+    opacity: 90%;
+    color: rgb(242, 182, 21);
+    font-family: friends;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 1%;
+}
+
+nav a {
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    color: rgb(242, 182, 21); /* Couleur du texte */
+    padding: 10px 15px; /* Espacement intérieur pour un look plus stylisé */
+    font-weight: bold; /* Gras */
+    transition: color 0.3s; /* Ajoute une transition de couleur pour un effet de survol en douceur */
+}
+
+nav a:hover {
+    opacity: 50%; ; /* Couleur du texte au survol */
+}
+
+
+
+.logo {
+    width: 150px;
+    height: 60px;
+    padding-right: 20px;
+    
+}
+
+.titre { 
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+h1 {
+    font-family: friends;
+    color: rgb(242, 182, 21);
+    
+    padding: 50px;
+    margin: 50px 0;
+
+}
+
+#bordure{
+    width: 30%;
+    border-bottom: solid;
+    border-top: solid;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.paragraphe {
+    margin: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.scrolling { 
+        display:flex;
+        justify-content: center;
+        align-items: center;
+}
+
+video {
+    width: 100%; /* Ajuste la largeur de la vidéo à 100% de son conteneur */
+    max-width: 600px; /* Définit une largeur maximale pour éviter que la vidéo ne soit trop grande sur des écrans larges */
+    height: auto; /* Permet à la vidéo de conserver son rapport d'aspect */
+    display: block; /* Évite les marges supplémentaires autour de la vidéo */
+    margin: 0 auto; /* Centre la vidéo horizontalement */
+  }
+
+.contenair-photo { 
+        width:100%;
+        overflow: hidden;
+        
+
+}
+
+.scrolling { 
+    display: flex;
+    animation: scroll 20s infinite;
+}
+
+@keyframes scroll {
+    0% {
+      transform: translateX(0); /* Début du défilement */
+    }
+    100% {
+      transform: translateX(70%); /* Fin du défilement (déplace toutes les images vers la gauche) */
+    }
+  }
+
+.scrolling img {
+    border-radius: 30px;
+    width: 500px;
+    height: 281px;
+    height: auto;
+    margin-right: 10px;
+}
+
+  /* PRESENTATION PERSONNAGES PRINCIPAUX */
+
+
+.photo-presentation { 
+    border-radius: 500px;
+    width: 250px;
+    height: 350px;
+    transition: transform 0.5s; /*transition pour l'effet 3d */
+}
+
+.effet3d { 
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    position: relative;
+    perspective: 2000px; /* Crée une perspective 3D */
+    transform-style: preserve-3d; /* Garde la structure 3D de l'enfant */
+    margin: 0 10px;
+    align-items:center
+}
+
+.effet3d:hover img{
+    transform: rotateY(360deg)
+    
+}
+
+.effet3d:hover .hidden-texte {
+    opacity: 1;
+}
+
+.hidden-texte {
+    border: solid rgb(242, 182, 21);
+    border-radius: 30px;
+    padding: 10px;
+    width: 210px;
+    max-height: 420px;
+    text-align: center;
+    opacity: 0;
+    font-size: 13px;
+    transition: opacity 0.5s;
+
+}
+
+.perso {
+    display:flex;
+    justify-content: space-around;
+    flex-direction: row;
+    
+}
+
+/*INSTAGRAM FRIENDS DANS PERSO*/
+
+.logo-insta:hover {
+    opacity: 50%;
+    
+}
+
+.logo-insta { 
+    width: 100px;
+    height: 100px;
+}
+
+#placement-instagram {
+   display: flex;
+   justify-content: space-between;
+   text-align: center;
+   margin: 20px;
+
+}
+
+
+/* page lieux principaux */
+
+.bordure {
+    width: 30%;
+    border-bottom: solid;
+    border-top: solid;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+
+}
+
+h2 {
+    color: rgb(242, 182, 21);
+    font-size: 30px;
+    
+
+}
+
+.contenair-lieux { 
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    margin-bottom: 50px;
+
+
+    
+}
+
+.effet { 
+    
+        transition: transform 2s;
+        border-radius: 20px;
+        width: 400px;
+        height: 250px;
+        
+        
+}
+
+
+
+.effet:hover {
+    transform: scale(1.2);
+    box-shadow: 5px 5px 10px rgb(242, 182, 21) ;
+    
+}
+
+h3 {
+    margin-left:  30px;;
+    text-decoration: underline;
+    
+}
+.texte-lieux {
+    text-align: center;
+    padding-bottom: 40px;
+    
+}
+
+/*PAGE RETROUVAILLES*/
+
+#reunion {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.contenair-gif { 
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: -5px
+    
+    
+}
+
+#contenair-reunion {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#reunion-tailles {
+    width: 600px;
+    height: 400px;
+}
+
+.overlay {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ajuste la position en utilisant des valeurs négatives pour centrer correctement */
+    width: 200px;
+    height: auto; /* Maintient les proportions de l'image */
+}
+
+#paragraphe-reunion {
+        margin: 50px;
+        padding-top: 20px;
+        text-align: center;
+
+}
+
+
+
+h4 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contenair-video {
+    margin:50px 100px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    padding: auto;
+
+}
+
+.video-contenair {
+    box-shadow: 5px 5px 10px rgb(242, 182, 21);
+    
+}
+
+.video-reunion { 
+    width: 350px;
+    height: auto;
+    display: block;
+    
+}
+
+#contenair-video {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 50px;
+    padding: auto;
+}
+
+/* PAGE FUNNY MOMENTS */
+
+.contenair-bloopers { 
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.bloopers-contenair {
+    
+    text-align: center;
+    margin: 30px;
+    width: 300px; /* Ajustez la largeur  */
+    height: 300px; /* Ajustez la hauteur  */
+    
+}
+
+.bloopers-contenair:hover {
+    width: 600px; 
+    height: 600px; 
+}
+
+
+.video-bloopers {
+    border-radius: 30px;  
+}
+
+/* PAGE CONTACT */
+
+.taille-contact {
+    
+    width: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    margin: auto;
+    
+}
+
+form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenair-prenom {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.contact {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+#bouton {
+    
+    border-radius: 10px;
+    padding:5px;
+    box-shadow:2px 2px 2px rgb(242, 182, 21) ;
+     
+}
+
+#bouton:hover {
+    opacity: 50%;
+    
+}
+
+.bordure-contact {
+    border-radius: 10px;
+    padding: 7px;
+    box-shadow:5px 2px 2px rgb(242, 182, 21) ;
+}
+
+#message {
+    text-align: center; /* Centre le texte horizontalement */
+}
+
+#message label {
+    display: block;
+    margin-bottom: 8px; /* Ajoute un espace entre le label et le textarea */
+}
+
+#message textarea {
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow:5px 5px 2px rgb(242, 182, 21) ;
+}
+
+/* footer */
+
+footer {
+     background-color:rgb(39, 39, 40);
+    opacity: 90%;
+    color: rgb(242, 182, 21);
+    font-size: xx-small;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;    
+    
+    
+}
+
+#contenair-logoinsta,
+#youtube {
+    flex: 1;
+    padding: 20px;
+}
+
+.logo-footer { 
+    width: 150px;
+    height: 60px;
+    margin: auto;
+    margin-bottom: 2px;
+}
+
+.logo-reseaux {
+    width: 50px;
+    height: 50px;
+}
+
+.texte-footer { 
+    text-align: center;    
+}
+
+#contenair-logoinsta { 
+    grid-column: 2;
+    text-align: center;
+    width: 100%;
+    padding: auto;
+}
+
+
+#youtube {
+    text-align: center;
+    width: 80%;
+    height: 45%;    
+}
+
+#logo-youtube {
+    width: 40px;
+    height: 40px;
+}
+
+.logo-reseaux:hover {
+    opacity: 50%;
+}
+
+
+/* responsive */
+
+@media screen and (max-width: 768px) {
+    nav, main, header, body, footer {
+        width: 100%;
+    }
+}
+
+/* Media Query pour les écrans plus petits */
+@media screen and (max-width: 480px) {
+    nav, main, body, footer {
+        float: none;
+        width: 100%;
+    }
+}
+
